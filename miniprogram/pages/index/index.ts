@@ -1,49 +1,21 @@
-// index.ts
-// 获取应用实例
-const app = getApp<IAppOption>()
-
+// component/view/view.ts
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
-  },
-  // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs',
-    })
-  },
-  onLoad() {
-    // @ts-ignore
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
-    }
-  },
-  getUserProfile() {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-    wx.getUserProfile({
-      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+    /**
+     * 组件的初始数据
+     */
+    data: {
+        list: [
+            "https://www.hookfunc.com/public/resource/img/hookfunc.svg",
+            "https://i.hexuexiao.cn/up/ca/63/4a/a32912fc26b8445797c8095ab74a63ca.jpg",
+            "https://www.qqkw.com/d/file/p/2018/05-17/0515954b9ce3b4eee4774a73406ed5b6.jpg",
+            "https://img.bizhizu.com/up/b2/4c/3d/b24c3d146d3cc943b62dde9a4a2bfa37.jpg",
+            "https://pic1.zhimg.com/v2-b9a5ba89b1e365d15838d0d5c8f36640_r.jpg",
+            "https://img.bizhizu.com/up/c6/a8/19/c6a81939f04fcc4e52b2b5bdf98ed178.jpg"
+        ]
+    },
+    onShow() {
+        this.getTabBar().setData({
+            active: 0
         })
-      }
-    })
-  },
-  getUserInfo(e: any) {
-    // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-    console.log(e)
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+    }
 })

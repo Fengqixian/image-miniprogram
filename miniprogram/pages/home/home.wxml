@@ -1,0 +1,10 @@
+<!-- 页面主体内容 -->
+<view class="page">
+    <!-- <view-page wx:if="{{active === 0}}"/>
+    <user-center wx:if="{{active === 1}}"/> -->
+</view>
+<!-- 底部TabBar -->
+<van-tabbar active="{{ active }}" bind:change="onChange">
+    <van-tabbar-item icon="home-o">标签</van-tabbar-item>
+    <van-tabbar-item icon="setting-o">我的</van-tabbar-item>
+</van-tabbar>

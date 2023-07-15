@@ -1,14 +1,30 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/user-center/user-center"
+    ],
+    "tabBar": {
+        "custom": true,
+        "list": [{
+                "pagePath": "pages/index/index"
+            },
+            {
+                "pagePath": "pages/user-center/user-center"
+            }
+        ]
+    },
+    "usingComponents": {
+        "van-tab": "vant-weapp/tab",
+        "van-tabs": "vant-weapp/tabs"
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
 }

@@ -1,0 +1,7 @@
+<!--pages/user-center/user-center.wxml-->
+<view class="header">
+</view>
+<van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="我的作品"></van-tab>
+    <van-tab title="我的订阅"></van-tab>
+</van-tabs>
