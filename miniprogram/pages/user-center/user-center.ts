@@ -4,11 +4,15 @@ Page({
      * 页面的初始数据
      */
     data: {
-        active: 0
+        active: 1
     },
     onShow() {
         this.getTabBar().setData({
             active: 1
+        })
+
+        this.setData({
+            active: 0
         })
     },
 

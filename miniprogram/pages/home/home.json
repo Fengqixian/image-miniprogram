@@ -1,6 +1,0 @@
-{
-    "usingComponents": {
-        "van-tabbar": "vant-weapp/tabbar",
-        "van-tabbar-item": "vant-weapp/tabbar-item"
-    }
-}
