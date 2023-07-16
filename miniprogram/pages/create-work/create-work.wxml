@@ -1,0 +1,42 @@
+<!--pages/create-work/create-work.wxml-->
+<view class="body">
+    <view class="header">
+        <text>上传作品</text>
+    </view>
+
+    <view class="work-chunk">
+        <view class="work-chunk-title">
+            <text>作品信息</text>
+        </view>
+        <view class="work-chunk-form">
+            <van-cell-group>
+                <van-field label="作品名称" value="{{ workInfo.worksName }}" placeholder="请输入作品名称" border="{{ false }}" />
+            </van-cell-group>
+        </view>
+    </view>
+
+    <view class="work-chunk">
+        <view class="work-chunk-title">
+            <text>作品内容</text>
+        </view>
+        <view class="work-chunk-form">
+            <view class="works-content">
+                <view class="wrapper">
+                    <t-upload media-type="{{['video','image']}}" files="{{originFiles}}" gridConfig="{{gridConfig}}" bind:success="handleSuccess" bind:remove="handleRemove" bind:click="handleClick" />
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view style="padding-bottom: 40%;"></view>
+    <view class="opation">
+        <van-row>
+            <van-col span="12">
+                <van-button bind:click="onBack" type="default">取消</van-button>
+            </van-col>
+            <van-col span="12">
+                <van-button type="primary">提交</van-button>
+            </van-col>
+        </van-row>
+    </view>
+</view>

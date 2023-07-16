@@ -1,11 +1,14 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/user-center/user-center"
+        "pages/user-center/user-center",
+        "component/create-work/create-work",
+        "pages/create-work/create-work"
     ],
     "tabBar": {
         "custom": true,
-        "list": [{
+        "list": [
+            {
                 "pagePath": "pages/index/index"
             },
             {
@@ -15,7 +18,8 @@
     },
     "usingComponents": {
         "van-tab": "vant-weapp/tab",
-        "van-tabs": "vant-weapp/tabs"
+        "van-tabs": "vant-weapp/tabs",
+        "van-button": "vant-weapp/button"
     },
     "window": {
         "backgroundTextStyle": "light",
@@ -24,7 +28,6 @@
         "navigationBarTextStyle": "black",
         "navigationStyle": "custom"
     },
-    "style": "v2",
     "sitemapLocation": "sitemap.json",
     "lazyCodeLoading": "requiredComponents"
 }

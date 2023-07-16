@@ -5,8 +5,12 @@
     <van-tabs sticky active="{{ active }}" bind:change="onChange">
         <van-tab title="我的作品">
             <my-works />
+            <view class="create-works">
+                <van-button  bind:click="onCreatework" type="primary" block round >上传作品</van-button>
+            </view>
         </van-tab>
         <van-tab title="我的订阅"></van-tab>
     </van-tabs>
     
 </view>
+<view style="padding-bottom: 15%;"></view>

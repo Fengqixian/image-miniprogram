@@ -20,5 +20,11 @@ Page({
         this.setData({
             active: event.detail.index
         })
+    },
+
+    onCreatework() {
+        wx.navigateTo({
+            url: "../create-work/create-work"
+        })
     }
 })

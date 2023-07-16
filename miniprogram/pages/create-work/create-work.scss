@@ -1,0 +1,48 @@
+/* pages/create-work/create-work.wxss */
+.header {
+    padding-top: 20%;
+    padding-bottom: 5%;
+    text {
+        display: block;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+.opation {
+    width: 100%;
+    display: flex;
+    justify-content: center;  /*水平*/
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 10%;
+}
+
+.body {
+    background-color: #f7f8fa;
+}
+.work-chunk {
+    padding: 5%;
+    .work-chunk-title {
+        margin-left: 5px;
+        text {
+            font-size: 16px;
+            font-weight: 500;
+            color: #909399;
+        }
+    }
+
+    .work-chunk-form {
+        padding-top: 5%;
+
+        .van-cell {
+            border-radius: 20rpx;
+        }
+
+        .works-content {
+            background-color: white;
+            padding-top: 10rpx;
+            padding-bottom: 10rpx;
+        }
+    }
+}
