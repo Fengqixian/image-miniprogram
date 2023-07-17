@@ -28,6 +28,5 @@
         "navigationBarTextStyle": "black",
         "navigationStyle": "custom"
     },
-    "sitemapLocation": "sitemap.json",
-    "lazyCodeLoading": "requiredComponents"
+    "sitemapLocation": "sitemap.json"
 }

@@ -1,4 +1,8 @@
 /* pages/create-work/create-work.wxss */
+page {
+    background-color: #f7f8fa;
+}
+  
 .header {
     padding-top: 20%;
     padding-bottom: 5%;
@@ -18,9 +22,6 @@
     padding-bottom: 10%;
 }
 
-.body {
-    background-color: #f7f8fa;
-}
 .work-chunk {
     padding: 5%;
     .work-chunk-title {

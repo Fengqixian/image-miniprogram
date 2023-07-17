@@ -1,5 +1,6 @@
 {
     "usingComponents": {
-        "my-works": "/component/my-works/my-works"
+        "my-works": "/component/my-works/my-works",
+        "t-avatar": "tdesign-miniprogram/avatar/avatar"
     }
 }
