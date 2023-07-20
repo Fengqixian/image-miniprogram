@@ -1,8 +1,10 @@
 <!--component/my-works/my-works.wxml-->
-<scroll-view type="custom">
-    <grid-view type="masonry" cross-axis-count="2">
-        <view wx:for="{{list}}">
-            <image src="{{item}}" lazy-load mode="aspectFill"></image>
-        </view>
-    </grid-view>
-</scroll-view>
+<view class="grid-container">
+  <view wx:for="{{list}}" class="grid-item">
+    <view class="item-works">
+      <t-image class="item-works-image" shape="round" error="slot" src="{{item}}" mode="aspectFill">
+        <text class="error-text" slot="error">加载失败</text>
+      </t-image>
+    </view>
+  </view>
+</view>

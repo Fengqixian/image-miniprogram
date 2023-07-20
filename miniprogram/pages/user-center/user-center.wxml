@@ -8,7 +8,7 @@
             <text>{{ userInfo.author }}</text>
         </view>
         <view class="user-info-introduce">
-            <audio poster="{{userInfo.poster}}" name="{{userInfo.name}}" author="{{userInfo.author}}" src="{{userInfo.src}}" id="myAudio" controls></audio>
+            <voice-play voice="https://www.hookfunc.com/public/resource/voice/dog.mp3"/>
 
         </view>
     </view>
@@ -23,4 +23,4 @@
     </van-tabs>
 
 </view>
-<view style="padding-bottom: 15%;"></view>
+<view style="padding-bottom: 25%;"></view>

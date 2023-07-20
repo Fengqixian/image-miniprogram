@@ -6,4 +6,4 @@
         </view>
     </grid-view>
 </scroll-view>
-<view style="padding-bottom: 20%;"></view>
+<view style="padding-bottom: 30%;"></view>

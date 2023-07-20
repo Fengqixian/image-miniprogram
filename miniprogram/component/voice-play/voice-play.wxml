@@ -1,0 +1,7 @@
+<!--component/voice-play/voice-play.wxml-->
+<view class="container" bindtap="onPlay">
+  <view class="container-item">
+    <image class="play-img" style="width: {{playState ? 30 : 40}}rpx;height: {{playState ? 30 : 40}}rpx;" src="{{playState ? './24gl-stop.png' : './play.png'}}"></image>
+  </view>
+  <view><canvas class="progress_icon" style="width: 150rpx; height: 60rpx;" type="2d"></canvas></view>
+</view>

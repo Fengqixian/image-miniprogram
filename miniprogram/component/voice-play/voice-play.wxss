@@ -1,0 +1,19 @@
+/* component/voice-play/voice-play.wxss */
+.container {
+  display: flex;
+  display: -webkit-flex;
+  border-radius: 70rpx;
+  border: 1px solid grey;
+  width: 240rpx;
+  background-image: linear-gradient(#FFFFFF, #FFFFFF, #F5F5F5);
+}
+
+.container-item {
+  display: flex;
+  align-items: center;
+  width: 60rpx;
+}
+
+.play-img {
+  margin-left: 20rpx;
+}
