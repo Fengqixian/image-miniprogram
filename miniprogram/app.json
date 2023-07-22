@@ -3,7 +3,8 @@
         "pages/index/index",
         "pages/user-center/user-center",
         "component/create-work/create-work",
-        "pages/create-work/create-work"
+        "pages/create-work/create-work",
+        "pages/show-image/show-image"
     ],
     "tabBar": {
         "custom": true,

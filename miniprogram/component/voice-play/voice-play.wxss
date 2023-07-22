@@ -1,6 +1,6 @@
 /* component/voice-play/voice-play.wxss */
 .container {
-  display: flex;
+  position: flex;
   display: -webkit-flex;
   border-radius: 70rpx;
   border: 1px solid grey;

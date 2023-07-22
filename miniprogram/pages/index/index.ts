@@ -14,8 +14,16 @@ Page({
         ]
     },
     onShow() {
+      if (typeof this.getTabBar === 'function' && this.getTabBar()) {
         this.getTabBar().setData({
-            active: 0
+          active: 0
         })
+      }
+    },
+
+    showimageevent() {
+      wx.navigateTo({
+        url: '../show-image/show-image'
+      })
     }
 })

@@ -29,6 +29,7 @@
     </view>
 
     <view style="padding-bottom: 40%;"></view>
+    
     <view class="opation">
         <van-row>
             <van-col span="12">

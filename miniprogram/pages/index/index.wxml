@@ -2,7 +2,9 @@
 <scroll-view type="custom">
     <grid-view type="masonry" cross-axis-count="2">
         <view wx:for="{{list}}">
-            <image src="{{item}}" lazy-load mode="widthFix"></image>
+          <t-image class="item-works-image" bind:tap="showimageevent" shape="round" error="slot" src="{{item}}" mode="widthFix">
+            <text class="error-text" slot="error">加载失败</text>
+          </t-image>
         </view>
     </grid-view>
 </scroll-view>

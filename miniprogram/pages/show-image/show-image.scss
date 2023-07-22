@@ -1,0 +1,18 @@
+/* pages/show-image/show-image.wxss */
+page {
+  background-color: #F8F8F8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+.container {
+  padding: 0 0 !important;
+} 
+
+.container swiper{
+  width: 100%;
+}
+.container swiper image{
+  width: 100%;
+}
+
