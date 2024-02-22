@@ -1,5 +1,5 @@
 <!--component/view/view.wxml-->
-<scroll-view type="custom">
+<!-- <scroll-view type="custom">
     <grid-view type="masonry" cross-axis-count="2">
         <view wx:for="{{list}}">
           <t-image class="item-works-image" bind:tap="showimageevent" shape="round" error="slot" src="{{item}}" mode="widthFix">
@@ -7,5 +7,5 @@
           </t-image>
         </view>
     </grid-view>
-</scroll-view>
+</scroll-view> -->
 <view style="padding-bottom: 30%;"></view>

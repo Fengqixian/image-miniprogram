@@ -3,7 +3,7 @@ Component({
         active: 0,
         list: [{
             icon: 'home-o',
-            text: '看片',
+            text: '服务',
             name: 'index',
             url: '/pages/index/index'
         },

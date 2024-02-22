@@ -2,7 +2,7 @@
 <view>
     <view class="header">
         <view class="user-info-view">
-            <t-avatar class="avatar-example" size="160rpx" image="{{userInfo.image}}" />
+            <t-avatar class="avatar-example" size="160rpx" image="{{userInfo.avatarUrl}}" />
         </view>
         <view class="user-info-nickname">
             <text>{{ userInfo.author }}</text>
