@@ -1,7 +1,6 @@
 {
     "usingComponents": {
         "voice-play": "/component/voice-play/voice-play",
-        "my-works": "/component/my-works/my-works",
         "t-avatar": "tdesign-miniprogram/avatar/avatar"
     }
 }

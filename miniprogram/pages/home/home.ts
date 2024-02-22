@@ -1,13 +1,24 @@
-// component/create-work/create-work.ts
+// pages/home/home.ts
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        img1: 'https://tdesign.gtimg.com/mobile/demos/example1.png',
+        img2: 'https://tdesign.gtimg.com/mobile/demos/example2.png',
+        img3: 'https://tdesign.gtimg.com/mobile/demos/example3.png',
+        border: {
+            color: '#f6f6f6',
+        },
     },
-
+    onShow() {
+        if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+            this.getTabBar().setData({
+                active: 0
+            })
+        }
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -19,13 +30,6 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
 
     },
 

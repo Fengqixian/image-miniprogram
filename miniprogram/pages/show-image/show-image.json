@@ -1,7 +1,0 @@
-{
-    "disableScroll": true,
-    "usingComponents": {
-      "t-image": "tdesign-miniprogram/image/image",
-      "t-swiper": "tdesign-miniprogram/swiper/swiper"
-    }
-}

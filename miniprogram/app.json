@@ -1,33 +1,24 @@
 {
     "pages": [
+        "pages/home/home",
         "pages/index/index",
-        "pages/user-center/user-center",
-        "component/create-work/create-work",
-        "pages/create-work/create-work",
-        "pages/show-image/show-image"
+        "pages/user-center/user-center"
     ],
     "tabBar": {
         "custom": true,
         "list": [
             {
-                "pagePath": "pages/index/index"
+                "pagePath": "pages/home/home"
             },
             {
                 "pagePath": "pages/user-center/user-center"
             }
         ]
     },
-    "usingComponents": {
-        "van-tab": "vant-weapp/tab",
-        "van-tabs": "vant-weapp/tabs",
-        "van-button": "vant-weapp/button"
-    },
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
-        "navigationBarTextStyle": "black",
-        "navigationStyle": "custom"
+        "navigationBarTextStyle": "black"
     },
     "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,20 @@
+<!--pages/home/home.wxml-->
+<t-image src="{{'https://www.hookfunc.com/public/resource/img/hookfunc.svg'}}" mode="scaleToFill" width="100%" height="200" />
+<t-sticky>
+    <t-tabs defaultValue="{{0}}" t-class="custom-tabs">
+        <t-tab-panel label="阿松大打算啊" value="0" />
+        <t-tab-panel label="阿松大" value="1" />
+        <t-tab-panel label="阿松大阿松大的阿萨" value="2" />
+        <t-tab-panel label="阿斯顿撒" value="3" />
+        <t-tab-panel label="啊实打实打算的" value="4" />
+    </t-tabs>
+</t-sticky>
+<t-grid class="block" column="{{2}}">
+  <t-grid-item text="标题文字" image="{{img1}}" />
+  <t-grid-item text="标题文字" image="{{img2}}" />
+  <t-grid-item text="标题文字" image="{{img3}}" />
+  <t-grid-item text="标题文字" image="{{img2}}" />
+  <t-grid-item text="最多四字" image="{{img1}}" />
+</t-grid>
+
+<view style="padding-bottom: 25%;"></view>
