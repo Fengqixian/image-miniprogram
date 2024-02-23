@@ -1,4 +1,5 @@
 // pages/home/home.ts
+import { wechatMiniLoginPC } from '../../api/wechat'
 Page({
 
     /**
@@ -22,7 +23,13 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad() {
+    onLoad(query: { scene: string }) {
+      const scene = decodeURIComponent(query.scene)
+      if (scene == undefined) {
+        return
+      }
+      
+      wechatMiniLoginPC(scene).then(res => console.log(res))
 
     },
 
