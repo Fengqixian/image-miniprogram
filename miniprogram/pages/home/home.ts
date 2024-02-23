@@ -25,7 +25,7 @@ Page({
      */
     onLoad(query: { scene: string }) {
       const scene = decodeURIComponent(query.scene)
-      if (scene == undefined) {
+      if (scene == "undefined") {
         return
       }
       

@@ -1,4 +1,4 @@
-const url = 'www.hookfunc.com' //  "127.0.0.1" // 
+const url =  'www.hookfunc.com' //  "127.0.0.1" // 
 
 const baseURL = 'https://' + url + '/api'
 
