@@ -1,0 +1,13 @@
+/* pages/user-center/user-center.wxss */
+.avatar-example {
+  display: flex;
+  margin-bottom: 32rpx;
+}
+
+.avatar-example--large:not(:last-child) {
+  margin-right: 64rpx;
+}
+
+page {
+  padding: 20px 20px 20px 20px;
+}

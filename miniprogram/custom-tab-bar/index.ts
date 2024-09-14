@@ -5,7 +5,7 @@ Component({
             icon: 'home-o',
             text: '服务',
             name: 'index',
-            url: '/pages/home/home'
+            url: '/pages/goods/goods'
         },
         {
             icon: 'smile-o',

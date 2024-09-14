@@ -1,20 +1,12 @@
 {
     "pages": [
-        "pages/home/home",
+        "pages/goods/index",
+        "pages/home/index",
+        "pages/cart/index",
         "pages/index/index",
-        "pages/user-center/user-center"
+        "pages/user-center/index"
     ],
-    "tabBar": {
-        "custom": true,
-        "list": [
-            {
-                "pagePath": "pages/home/home"
-            },
-            {
-                "pagePath": "pages/user-center/user-center"
-            }
-        ]
-    },
+    
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",

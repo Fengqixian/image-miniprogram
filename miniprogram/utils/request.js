@@ -1,8 +1,8 @@
-const url =  'www.hookfunc.com' //  "127.0.0.1" // 
+const url =  "124.220.175.128:8000" // 
 
-const baseURL = 'https://' + url + '/api'
+const baseURL = 'http://' + url + '/v1'
 
-const WEB_SCOKET_URL = 'wss://' + url + '/api/chat/ws'
+const WEB_SCOKET_URL = 'ws://' + url + '/chat/ws'
 
 export const config = {
     baseURL: baseURL,
@@ -24,10 +24,10 @@ export const request = ({
             method,
             timeout: 15000,
             header: {
-                "sa-token": token
+                "Authorization": token
             },
             success: (res) => {
-                if (res.data.code != 20000) {
+                if (res.data.code != 0) {
                     if (res.data.code == 50012) {
                         // 错误的令牌
                         wx.reLaunch({

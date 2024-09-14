@@ -1,0 +1,11 @@
+<!--pages/user-center/user-center.wxml-->
+<view>
+  <t-row>
+    <t-col span="8" t-class="dark">
+      <t-avatar class="avatar-example" image="{{image}}" size="large" />
+    </t-col>
+    <t-col span="8" t-class="light">
+      <text>123132131</text>
+    </t-col>
+  </t-row>
+</view>

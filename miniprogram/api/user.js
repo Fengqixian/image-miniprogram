@@ -5,7 +5,7 @@ import {
 // 获取令牌
 export const getToken = (data) => {
     return request({
-        url: '/user/getToken',
+        url: '/wechat/program/login',
         data,
         method: "POST"
     })
@@ -15,7 +15,7 @@ export const getToken = (data) => {
 // 获取用户信息
 export const getInfo = () => {
     return request({
-        url: '/user/info'
+        url: '/user'
     })
 }
 

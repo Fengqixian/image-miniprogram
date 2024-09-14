@@ -1,0 +1,14 @@
+<view class="custom-navbar">
+  <t-swiper current="{{current}}" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}" navigation="{{ { type: 'dots' } }}" list="{{swiperList}}" height="160" bind:click="onTap" bind:change="onChange" bind:image-load="onImageLoad">
+  </t-swiper>
+</view>
+<t-sticky offset-top="{{0}}">
+  <t-notice-bar visible="true" marquee="{{marquee2}}" prefixIcon="sound" content="提示文字描述提示文字描述提示文字描述提示文字描述文"></t-notice-bar>
+</t-sticky>
+<t-grid class="t-grid badge" column="2">
+  <t-grid-item wx:for="{{goodsList}}" wx:key="index" bind:tap="onOpenGoodsDetail" text="{{item.goodsName}}" image="{{item.coverImage}}" badge-props="{{ { dot: true } }}" />
+</t-grid>
+<view style="height: 100px;">
+  <van-submit-bar price="{{ 3050 }}" button-text="结算" bind:submit="onShowCart" >
+  </van-submit-bar>
+</view>
