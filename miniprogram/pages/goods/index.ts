@@ -45,7 +45,12 @@ Page({
     const _this = this
     getGoodsList().then(res => {
       _this.setData({
-        goodsList: res.data
+        goodsList: res.data.map((item: any) => {
+          return {
+            ...item,
+            price: (item.price / 100).toFixed(2)
+          }
+        })
       })
     })
   },

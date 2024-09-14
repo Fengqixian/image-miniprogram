@@ -2,13 +2,30 @@
   <t-swiper current="{{current}}" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}" navigation="{{ { type: 'dots' } }}" list="{{swiperList}}" height="160" bind:click="onTap" bind:change="onChange" bind:image-load="onImageLoad">
   </t-swiper>
 </view>
+
 <t-sticky offset-top="{{0}}">
   <t-notice-bar visible="true" marquee="{{marquee2}}" prefixIcon="sound" content="提示文字描述提示文字描述提示文字描述提示文字描述文"></t-notice-bar>
 </t-sticky>
-<t-grid class="t-grid badge" column="2">
-  <t-grid-item wx:for="{{goodsList}}" wx:key="index" bind:tap="onOpenGoodsDetail" text="{{item.goodsName}}" image="{{item.coverImage}}" badge-props="{{ { dot: true } }}" />
-</t-grid>
+
+<scroll-view type="custom">
+  <grid-view type="masonry" cross-axis-count="2">
+    <view class="goods-window" wx:for="{{goodsList}}" >
+      <view class="goods-window-image">
+        <t-image  style="width: 250rpx; height: 250rpx;" error="slot" src="{{item.coverImage}}" >
+          <text class="error-text" slot="error">加载失败</text>
+        </t-image>
+      </view>
+      <view style="text-align: center;padding-bottom: 20rpx;">
+        <text class="goods-window-text-title">{{item.goodsName}}</text>
+      </view>
+      <view style="text-align: center;">
+        <text><text class="goods-window-text-price">￥{{item.price}}</text> / 斤</text>
+      </view>
+    </view>
+  </grid-view>
+</scroll-view>
+
 <view style="height: 100px;">
-  <van-submit-bar price="{{ 3050 }}" button-text="结算" bind:submit="onShowCart" >
+  <van-submit-bar price="{{ 3050 }}" button-text="结算" bind:submit="onShowCart">
   </van-submit-bar>
 </view>
