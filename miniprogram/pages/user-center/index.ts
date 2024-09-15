@@ -8,20 +8,20 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo: {}
   },
   onLoad() {
     getInfo().then((res: any) => {
-      const data = res.data
       this.setData({
-        ['userInfo.author']: data.nickName,
-        ['userInfo.avatarUrl']: data.avatar
+        ['userInfo.nickName']: res.nickName,
+        ['userInfo.avatar']: res.avatar
       })
     })
   },
   onShow() {
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
       this.getTabBar().setData({
-        active: 1
+        active: 2
       })
     }
 

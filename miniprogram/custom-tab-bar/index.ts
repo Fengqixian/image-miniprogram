@@ -3,15 +3,22 @@ Component({
         active: 0,
         list: [{
             icon: 'home-o',
-            text: '服务',
+            text: '商品',
             name: 'index',
-            url: '/pages/goods/goods'
+            url: '/pages/goods/index'
+        }
+        ,
+        {
+            icon: 'shopping-cart-o',
+            text: '购物车',
+            name: 'cart',
+            url: '/pages/cart/index'
         },
         {
             icon: 'smile-o',
             text: '我的',
             name: 'user-center',
-            url: '/pages/user-center/user-center'
+            url: '/pages/user-center/index'
         }
         ]
     },

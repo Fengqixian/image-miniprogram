@@ -5,7 +5,6 @@
 
 .goods-window-image {
   text-align: center;
-  padding: 0 0;
 }
 
 .goods-window-text-title {
@@ -16,4 +15,16 @@
 .goods-window-text-price {
   color: red;
   font-weight: 800;
+}
+
+.bottom-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: red; /* 背景颜色，根据需求调整 */
+  border-top: 1px solid #ddd; /* 上边框线，根据需求调整 */
+  text-align: center; /* 文本居中显示 */
+  padding: 10px; /* 内边距，根据需求调整 */
 }

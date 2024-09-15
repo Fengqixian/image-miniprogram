@@ -6,5 +6,6 @@
         "urlCheck": false,
         "autoAudits": false,
         "preloadBackgroundData": false
-    }
+    },
+    "libVersion": "3.1.5"
 }

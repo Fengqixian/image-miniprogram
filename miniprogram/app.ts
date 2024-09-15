@@ -10,7 +10,7 @@ App<IAppOption>({
         wx.login({
             success: res => {
                 getToken({jsCode : res.code}).then((res2) => {
-                    wx.setStorageSync('token', res2.data)
+                    wx.setStorageSync('token', res2)
                     resolve(res2)
                 })
             },fail(res) {

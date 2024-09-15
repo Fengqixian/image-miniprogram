@@ -2,10 +2,10 @@
 <view>
   <t-row>
     <t-col span="8" t-class="dark">
-      <t-avatar class="avatar-example" image="{{image}}" size="large" />
+      <t-avatar class="avatar-example" image="{{userInfo.avatar}}" size="large" />
     </t-col>
     <t-col span="8" t-class="light">
-      <text>123132131</text>
+      <text>{{userInfo.nickName}}</text>
     </t-col>
   </t-row>
 </view>
