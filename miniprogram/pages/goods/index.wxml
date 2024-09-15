@@ -10,7 +10,7 @@
   <scroll-view type="custom" scroll-y="true">
     <grid-view type="masonry" cross-axis-count="2">
       <view class="goods-window" wx:for="{{goodsList}}" wx:key="index">
-        <view bind:tap="onAddCart" data-id="{{item.id}}">
+        <view bind:tap="onAddCart" data-data="{{item}}">
           <view class="goods-window-image">
             <t-image style="width: 250rpx; height: 250rpx;" error="slot" src="{{item.coverImage}}">
               <text class="error-text" slot="error">加载失败</text>
@@ -28,7 +28,7 @@
     <view style="height: 150rpx;"></view>
   </scroll-view>
   <view>
-    <van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onSubmit">
+    <van-submit-bar price="{{ total }}" button-text="提交订单" bind:submit="onSubmit">
       <van-icon style="font-size: 60rpx;margin-top: 20rpx;margin-left: 50rpx;" name="shopping-cart-o" info="{{goodsAmount}}" />
     </van-submit-bar>
   </view>

@@ -1,4 +1,5 @@
 import {getGoodsList} from '../../api/goods';
+import { isNumber } from '../../miniprogram_npm/@vant/weapp/common/validator';
 const imageCdn = 'https://tdesign.gtimg.com/mobile/demos';
 const swiperList = [
   `${imageCdn}/swiper1.png`,
@@ -17,6 +18,7 @@ Page({
     scrollHeight: 0,
     goodsList: [],
     goodsAmount: 0,
+    total: 0,
     cart: [],
     img1: 'https://tdesign.gtimg.com/mobile/demos/example1.png',
     img2: 'https://tdesign.gtimg.com/mobile/demos/example2.png',
@@ -67,18 +69,18 @@ Page({
   onOpenGoodsDetail() {
   },
   onAddCart(e: any) {
-    const goodsId = e.currentTarget.dataset.id
+    const goods = e.currentTarget.dataset.data
     let newCart: any = this.data.cart
-    let target = newCart.filter((e: any) => e.goodsId == goodsId)
+    let target = newCart.filter((e: any) => e.goodsId == goods.id)
     if (target.length === 0) {
-      const goods = {goodsId: goodsId, amount: 1}
-      newCart.push(goods)
+      newCart.push({goodsId: goods.id, price: goods.price, amount: 1})
     } else {
       target.map((e:any) => e.amount = e.amount + 1)
     }
     this.setData({
       cart: newCart,
-      goodsAmount: newCart.reduce((sum: Number, item:any) => sum + item.amount, 0)
+      goodsAmount: newCart.reduce((sum: number, item:any) => sum + item.amount, 0),
+      total: newCart.reduce((sum: number, item:any) => sum + (Number(item.price) * 100 * item.amount), 0)
     })
   }
 })
