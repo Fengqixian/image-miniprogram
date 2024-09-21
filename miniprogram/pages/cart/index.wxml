@@ -1,1 +1,2 @@
 <!--pages/goods-detail/index.wxml-->
+<text>{{cart}}</text>

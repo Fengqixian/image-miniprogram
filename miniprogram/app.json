@@ -1,16 +1,25 @@
 {
-    "pages": [
-        "pages/goods/index",
-        "pages/home/index",
-        "pages/cart/index",
-        "pages/index/index",
-        "pages/user-center/index"
-    ],
-    
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTextStyle": "black"
-    },
-    "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/goods/index",
+    "pages/home/index",
+    "pages/cart/index",
+    "pages/index/index",
+    "pages/user-center/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "list": [{
+      "pagePath": "pages/goods/index",
+      "text": "商品"
+    }, {
+      "pagePath": "pages/user-center/index",
+      "text": "我的"
+    }]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -10,6 +10,8 @@
     "t-sticky": "tdesign-miniprogram/sticky/sticky",
     "t-icon": "tdesign-miniprogram/icon/icon",
     "van-submit-bar": "@vant/weapp/submit-bar/index",
-    "van-icon": "@vant/weapp/icon/index"
+    "van-icon": "@vant/weapp/icon/index",
+    "t-popup": "tdesign-miniprogram/popup/popup",
+    "t-button": "tdesign-miniprogram/button/button"
   }
 }

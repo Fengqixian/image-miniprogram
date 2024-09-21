@@ -1,5 +1,4 @@
 import {getGoodsList} from '../../api/goods';
-import { isNumber } from '../../miniprogram_npm/@vant/weapp/common/validator';
 const imageCdn = 'https://tdesign.gtimg.com/mobile/demos';
 const swiperList = [
   `${imageCdn}/swiper1.png`,
@@ -15,6 +14,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    visible: false,
     scrollHeight: 0,
     goodsList: [],
     goodsAmount: 0,
@@ -48,10 +48,15 @@ Page({
    */
   onLoad() {
     const _this = this
-    const window = wx.getWindowInfo()
-    _this.setData({
-      scrollHeight: window.windowHeight - window.statusBarHeight
+    wx.getStorage({
+      key: 'tabbarHeight',
+      success (res) {
+        _this.setData({
+          scrollHeight: res.data
+        })
+      }
     })
+    
     getGoodsList().then(res => {
       _this.setData({
         goodsList: res.map((item: any) => {
@@ -81,6 +86,26 @@ Page({
       cart: newCart,
       goodsAmount: newCart.reduce((sum: number, item:any) => sum + item.amount, 0),
       total: newCart.reduce((sum: number, item:any) => sum + (Number(item.price) * 100 * item.amount), 0)
+    })
+  },
+  onOpenCart() {
+    this.setData({
+      visible: true
+    })
+  },
+  onVisibleChange(e: any) {
+    this.setData({
+      visible: e.detail.visible,
+    });
+  },
+  onPlaceOrder() {
+    const data = this.data.cart
+    wx.navigateTo({
+      url: "../cart/index",
+      success: function(res) {
+        // 通过eventChannel向被打开页面传送数据
+        res.eventChannel.emit('acceptDataFromOpenerPage', { data: data })
+      }
     })
   }
 })

@@ -8,12 +8,12 @@ Component({
             url: '/pages/goods/index'
         }
         ,
-        {
+        /* {
             icon: 'shopping-cart-o',
             text: '购物车',
             name: 'cart',
             url: '/pages/cart/index'
-        },
+        }, */
         {
             icon: 'smile-o',
             text: '我的',
@@ -22,6 +22,16 @@ Component({
         }
         ]
     },
+    ready() {
+      // 缓存tabber栏的高度
+      wx.getSystemInfo({
+        success(res) {
+          let lift = res.screenHeight - res.safeArea.bottom + 50
+          wx.setStorageSync("tabbarHeight", lift)
+        }
+      })
+    },
+  
     methods: {
         onChange(event: any) {
             wx.switchTab({
